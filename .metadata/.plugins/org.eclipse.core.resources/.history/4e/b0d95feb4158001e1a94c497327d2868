@@ -1,0 +1,38 @@
+package com.aurionpro.model;
+
+public class TicTacToeTest {
+
+    public static void main(String[] args) {
+        Board board = new Board();
+        ResultAnalyzer resultAnalyzer = new ResultAnalyzer(board);
+
+        // Example moves (you can replace these with user input):
+        try {
+            board.setCellMark(0, MarkType.X);
+            board.setCellMark(1, MarkType.O);
+            board.setCellMark(3, MarkType.X);
+            board.setCellMark(4, MarkType.O);
+            board.setCellMark(6, MarkType.X);
+        } catch (CellAlreadyMarkedException e) {
+            System.out.println("Cell is already marked!");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid cell location!");
+        }
+
+        // Analyze the game result
+        ResultType result = resultAnalyzer.analyzeResult();
+
+        // Display the result
+        switch (result) {
+            case WIN:
+                System.out.println("Player X wins!");
+                break;
+            case DRAW:
+                System.out.println("It's a draw!");
+                break;
+            case PROGRESS:
+                System.out.println("The game is still in progress.");
+                break;
+        }
+    }
+}

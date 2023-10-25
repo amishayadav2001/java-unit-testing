@@ -1,0 +1,22 @@
+package com.aurionpro.model;
+
+public class Cell {
+	
+	private MarkType mark;
+
+	public Cell(MarkType mark) {
+		super();
+		this.mark = MarkType.EMPTY;
+	}
+	public boolean isEmpty() {
+		return ;
+		
+	}
+	public MarkType getMark() {
+		return ;
+		
+	}
+	
+	+setMark(mark:MarkType)throws cellAlreadyMarkedException
+
+}

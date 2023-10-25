@@ -1,0 +1,29 @@
+package com.aurionpro.model;
+
+public class ResultAnalyzer {
+	private Board board;
+	private ResultType result;
+
+	public ResultAnalyzer(Board board, ResultType result) {
+		super();
+		this.board = board;
+		this.result = result;
+	}
+
+	public Board getBoard() {
+		return board;
+	}
+
+	public void setBoard(Board board) {
+		this.board = board;
+	}
+
+	public ResultType getResult() {
+		return result;
+	}
+
+	public void setResult(ResultType result) {
+		this.result = result;
+	}
+
+}
